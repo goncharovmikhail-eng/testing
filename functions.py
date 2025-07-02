@@ -1,7 +1,12 @@
-#!/usr/bin/env python3
-
-from header import *
-
+import sys
+import random
+import ipaddress
+import hashlib
+import bcrypt
+import base64
+import time
+from cryptography.fernet import Fernet
+from faker import Faker
 try:
     import requests
 except ImportError:
