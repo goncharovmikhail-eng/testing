@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-import sys
-import os
-import time
-import argparse
+
 from header import *
 from functions import *
 
+# аргументы. верхнеуровневые функции
 def add_common_args(parser):
     parser.add_argument("--hash", choices=['sha256', 'bcrypt'])
     parser.add_argument("--encrypt", choices=['aes'])
@@ -81,6 +79,7 @@ def handle_clean_command(args):
             except Exception:
                 pass
     print("Удалено файлов:", deleted)
+# конец 
 
 def main():
     parser = argparse.ArgumentParser(description="faker-utils with file generation")
